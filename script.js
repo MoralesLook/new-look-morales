@@ -1,0 +1,1 @@
+console.log("New Look Morales - Website loaded");

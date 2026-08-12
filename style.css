@@ -1,0 +1,1207 @@
+/* ========================================
+   RESET
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f4f2;
+    color: #111;
+    overflow-x: hidden;
+}
+
+
+a {
+    color: inherit;
+}
+
+
+/* ========================================
+   NAVBAR
+======================================== */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(5, 5, 5, 0.94);
+    backdrop-filter: blur(12px);
+    z-index: 1000;
+}
+
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    text-decoration: none;
+}
+
+
+.navbar-logo {
+    width: 62px;
+    height: 62px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+.navbar-brand-name {
+    color: white;
+    font-size: 19px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    white-space: nowrap;
+}
+
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+
+nav a {
+    color: #bbb;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 2px;
+    padding: 10px 0;
+    transition: 0.3s;
+}
+
+
+nav a:hover {
+    color: white;
+}
+
+
+/* ========================================
+   HOME
+======================================== */
+
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 150px 8% 80px;
+    background-image: url("images/postazioni.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.92) 0%,
+            rgba(0, 0, 0, 0.72) 45%,
+            rgba(0, 0, 0, 0.25) 100%
+        );
+}
+
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1000px;
+    color: white;
+}
+
+
+.hero-small {
+    margin-bottom: 25px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    color: #ccc;
+}
+
+
+.hero h1 {
+    max-width: 1000px;
+    font-size: clamp(55px, 7.5vw, 115px);
+    line-height: 0.91;
+    letter-spacing: -5px;
+    margin-bottom: 35px;
+}
+
+
+.hero h1 span {
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+}
+
+
+.hero-description {
+    max-width: 600px;
+    color: #d0d0d0;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+
+.hero-button {
+    display: inline-block;
+    padding: 17px 27px;
+    border: 1px solid white;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+
+.hero-button:hover {
+    background: white;
+    color: black;
+}
+
+
+/* ========================================
+   SCROLL
+======================================== */
+
+.scroll-indicator {
+    position: absolute;
+    z-index: 2;
+    right: 5%;
+    bottom: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    color: white;
+}
+
+
+.scroll-indicator span {
+    writing-mode: vertical-rl;
+    font-size: 9px;
+    letter-spacing: 3px;
+}
+
+
+.scroll-line {
+    width: 1px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.6);
+}
+
+
+/* ========================================
+   CHI SIAMO
+======================================== */
+
+.about-home {
+    min-height: 750px;
+    padding: 130px 8%;
+    display: grid;
+    grid-template-columns: 0.7fr 2.3fr;
+    gap: 100px;
+    align-items: start;
+    background: #f4f4f2;
+}
+
+
+.about-number {
+    padding-top: 15px;
+}
+
+
+.about-number span {
+    display: block;
+    font-size: clamp(90px, 10vw, 160px);
+    line-height: 0.8;
+    font-weight: 800;
+    letter-spacing: -8px;
+}
+
+
+.about-number p {
+    margin-top: 25px;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    line-height: 1.7;
+}
+
+
+.section-label {
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 25px;
+}
+
+
+.about-text h2 {
+    max-width: 950px;
+    font-size: clamp(40px, 5vw, 72px);
+    line-height: 1;
+    letter-spacing: -3px;
+    margin-bottom: 60px;
+}
+
+
+.about-text h2 span {
+    color: #999;
+}
+
+
+.about-columns {
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 45px;
+}
+
+
+.about-columns p {
+    color: #444;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+
+/* ========================================
+   PUNTI DI FORZA
+======================================== */
+
+.values-section {
+    padding: 100px 8%;
+    background: #0c0c0c;
+    color: white;
+}
+
+
+.values-grid {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 70px;
+}
+
+
+.value-card {
+    text-align: center;
+    padding: 20px;
+}
+
+
+.value-icon {
+    width: 145px;
+    height: 145px;
+    margin: 0 auto 40px;
+    border: 2px solid #b88a49;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.value-icon svg {
+    width: 60px;
+    height: 60px;
+    fill: none;
+    stroke: #b88a49;
+    stroke-width: 2.2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+.value-card h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+
+
+.value-card p {
+    max-width: 360px;
+    margin: 0 auto;
+    color: #bbb;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* ========================================
+   TITOLI SEZIONI
+======================================== */
+
+.section-heading {
+    margin-bottom: 70px;
+}
+
+
+.section-heading h2 {
+    font-size: clamp(55px, 7vw, 105px);
+    line-height: 0.9;
+    letter-spacing: -5px;
+    margin-bottom: 35px;
+}
+
+
+.section-intro {
+    max-width: 650px;
+    color: #ddd;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+
+.dark-text {
+    color: #555;
+}
+
+
+/* ========================================
+   SERVIZI
+======================================== */
+
+.prices-section {
+    padding: 130px 8% 150px;
+    background: #fafafa;
+}
+
+
+.price-services-list {
+    max-width: 1250px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+
+.price-service-row {
+    width: 100%;
+    min-height: 110px;
+
+    display: grid;
+
+    grid-template-columns:
+        1.15fr 2.1fr 0.45fr;
+
+    align-items: center;
+
+    gap: 30px;
+
+    padding: 25px 28px;
+
+    background: white;
+
+    border: 1px solid #d7d7d7;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.price-service-row:hover {
+    border-color: #b88a49;
+
+    box-shadow:
+        0 8px 25px
+        rgba(0, 0, 0, 0.06);
+
+    transform: translateY(-2px);
+}
+
+
+.price-service-name {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+
+.price-service-name h3 {
+    color: #666;
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+
+.price-icon {
+    width: 38px;
+    min-width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.price-icon svg {
+    width: 32px;
+    height: 32px;
+    fill: none;
+    stroke: #555;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: 0.3s;
+}
+
+
+.price-service-row:hover .price-icon svg {
+    stroke: #b88a49;
+}
+
+
+.price-service-description p {
+    max-width: 520px;
+    color: #666;
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+
+.price-service-price {
+    justify-self: end;
+    color: #666;
+    font-size: 19px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+
+/* ========================================
+   PRODOTTI
+======================================== */
+
+.products-section {
+    padding: 130px 8% 150px;
+    background: #e8e8e8;
+}
+
+
+.products-gallery {
+    max-width: 1250px;
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.product-photo {
+    height: 650px;
+    overflow: hidden;
+    background: #111;
+}
+
+
+.product-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+
+    transition:
+        transform 0.5s ease;
+}
+
+
+.product-photo:hover img {
+    transform: scale(1.04);
+}
+
+
+/* ========================================
+   CONTATTI
+======================================== */
+
+.contacts-wide {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    min-height: 650px;
+
+    background: #0c0c0c;
+
+    color: white;
+}
+
+
+/* ========================================
+   CONTATTI SINISTRA
+======================================== */
+
+.contacts-left {
+    padding: 75px 8% 70px;
+
+    border-right:
+        1px solid
+        rgba(255,255,255,0.2);
+}
+
+
+.contacts-brand {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 65px;
+}
+
+
+.contacts-logo {
+    width: 125px;
+    height: 125px;
+    object-fit: cover;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+
+.contacts-brand-text h2 {
+    font-size: clamp(28px, 2.5vw, 45px);
+    letter-spacing: -2px;
+    margin-bottom: 10px;
+}
+
+
+.contacts-brand-text p {
+    color: #999;
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+
+.contacts-info-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 55px 70px;
+}
+
+
+.contact-info-block h3 {
+    margin-bottom: 16px;
+    font-size: 28px;
+    letter-spacing: -1px;
+}
+
+
+.contact-info-block p {
+    color: #aaa;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+.contact-phone {
+    color: white !important;
+    font-size: 22px !important;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+/* ========================================
+   PULSANTI CONTATTI
+======================================== */
+
+.contact-action-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 18px;
+
+    border:
+        1px solid #b88a49;
+
+    text-decoration: none;
+
+    color: white;
+
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+    transition: 0.3s;
+}
+
+
+.contact-action-button:hover {
+    background: #b88a49;
+    color: #111;
+}
+
+
+/* ========================================
+   POSIZIONE / MAPPA
+======================================== */
+
+.contact-location-block {
+    grid-column: 1 / -1;
+    padding-top: 5px;
+}
+
+
+.contact-address {
+    margin-bottom: 20px;
+}
+
+
+.contact-map {
+    width: 100%;
+    height: 330px;
+
+    overflow: hidden;
+
+    border: 1px solid #b88a49;
+
+    background: #111;
+}
+
+
+.contact-map iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: 0;
+}
+
+
+/* ========================================
+   CONTATTI DESTRA
+======================================== */
+
+.contacts-right {
+    padding: 75px 9% 70px;
+
+    display: flex;
+
+    align-items: stretch;
+}
+
+
+.contacts-right-content {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+.contacts-small-title {
+    margin-bottom: 25px;
+
+    color: #b88a49 !important;
+
+    font-size: 11px !important;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+
+.contacts-right h2 {
+    margin-bottom: 35px;
+
+    font-size:
+        clamp(45px, 5vw, 80px);
+
+    line-height: 0.95;
+
+    letter-spacing: -3px;
+}
+
+
+.contacts-right p {
+    color: #aaa;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+
+.contacts-right-actions {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 35px;
+}
+
+
+.contact-outline-button {
+    display: inline-block;
+
+    padding: 14px 22px;
+
+    border:
+        1px solid #b88a49;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+    transition: 0.3s;
+}
+
+
+.contact-outline-button:hover {
+    background: #b88a49;
+    color: #111;
+}
+
+
+/* ========================================
+   SOCIAL IN FONDO
+======================================== */
+
+.contacts-right-social {
+    margin-top: auto;
+    padding-top: 70px;
+}
+
+
+.contacts-right-social h3 {
+    margin-bottom: 18px;
+    font-size: 28px;
+    letter-spacing: -1px;
+}
+
+
+.contact-socials {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+
+.contact-socials a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+
+    border-bottom:
+        1px solid #b88a49;
+
+    padding-bottom: 4px;
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.simple-footer {
+    padding: 25px 8%;
+
+    background: #050505;
+
+    color: #777;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    font-size: 11px;
+
+    border-top: 1px solid #222;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1000px) {
+
+    .navbar {
+        padding: 0 4%;
+    }
+
+
+    .navbar-brand-name {
+        font-size: 15px;
+        letter-spacing: 2px;
+    }
+
+
+    nav {
+        gap: 16px;
+    }
+
+
+    nav a {
+        font-size: 10px;
+    }
+
+
+    .about-home {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+
+    .about-columns {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+
+    .values-grid {
+        gap: 25px;
+    }
+
+
+    .value-icon {
+        width: 120px;
+        height: 120px;
+    }
+
+
+    .price-service-row {
+        grid-template-columns:
+            1.2fr 1.8fr 0.4fr;
+
+        gap: 20px;
+
+        padding: 24px 22px;
+    }
+
+
+    .products-gallery {
+        gap: 12px;
+    }
+
+
+    .product-photo {
+        height: 500px;
+    }
+
+
+    .contacts-wide {
+        grid-template-columns: 1fr;
+    }
+
+
+    .contacts-left {
+        border-right: none;
+
+        border-bottom:
+            1px solid
+            rgba(255,255,255,0.2);
+    }
+
+
+    .contacts-right-social {
+        margin-top: 70px;
+        padding-top: 0;
+    }
+}
+
+
+/* ========================================
+   SMARTPHONE
+======================================== */
+
+@media (max-width: 650px) {
+
+    .navbar {
+        height: 75px;
+        padding: 0 5%;
+    }
+
+
+    .navbar-logo {
+        width: 48px;
+        height: 48px;
+    }
+
+
+    .navbar-brand {
+        gap: 10px;
+    }
+
+
+    .navbar-brand-name {
+        font-size: 12px;
+        letter-spacing: 1.5px;
+    }
+
+
+    nav {
+        display: none;
+    }
+
+
+    /* HOME */
+
+    .hero {
+        min-height: 100svh;
+        padding: 120px 6% 70px;
+    }
+
+
+    .hero h1 {
+        font-size:
+            clamp(48px, 15vw, 70px);
+
+        letter-spacing: -3px;
+    }
+
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+
+    .scroll-indicator {
+        display: none;
+    }
+
+
+    /* CHI SIAMO */
+
+    .about-home {
+        padding: 90px 6%;
+        gap: 55px;
+    }
+
+
+    .about-number span {
+        font-size: 100px;
+        letter-spacing: -5px;
+    }
+
+
+    .about-text h2 {
+        font-size: 42px;
+        letter-spacing: -2px;
+    }
+
+
+    .about-columns {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+
+    /* PUNTI DI FORZA */
+
+    .values-section {
+        padding: 80px 6%;
+    }
+
+
+    .values-grid {
+        grid-template-columns: 1fr;
+        gap: 70px;
+    }
+
+
+    .value-card {
+        padding: 0;
+    }
+
+
+    .value-icon {
+        width: 125px;
+        height: 125px;
+        margin-bottom: 30px;
+    }
+
+
+    .value-card h3 {
+        font-size: 25px;
+    }
+
+
+    /* SEZIONI */
+
+    .prices-section,
+    .products-section {
+        padding: 80px 6% 100px;
+    }
+
+
+    .section-heading h2 {
+        font-size: 52px;
+        letter-spacing: -3px;
+    }
+
+
+    /* SERVIZI */
+
+    .price-services-list {
+        gap: 14px;
+    }
+
+
+    .price-service-row {
+        min-height: auto;
+
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+
+        padding: 25px;
+    }
+
+
+    .price-service-name {
+        padding-bottom: 18px;
+
+        border-bottom:
+            1px solid #eee;
+    }
+
+
+    .price-service-name h3 {
+        font-size: 20px;
+    }
+
+
+    .price-service-price {
+        justify-self: start;
+
+        font-size: 22px;
+
+        color: #111;
+    }
+
+
+    /* PRODOTTI */
+
+    .products-gallery {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+
+    .product-photo {
+        height: 600px;
+    }
+
+
+    /* CONTATTI */
+
+    .contacts-left,
+    .contacts-right {
+        padding: 70px 6%;
+    }
+
+
+    .contacts-brand {
+        align-items: center;
+        gap: 18px;
+        margin-bottom: 50px;
+    }
+
+
+    .contacts-logo {
+        width: 90px;
+        height: 90px;
+    }
+
+
+    .contacts-brand-text h2 {
+        font-size: 25px;
+        letter-spacing: -1px;
+    }
+
+
+    .contacts-brand-text p {
+        font-size: 10px;
+    }
+
+
+    .contacts-info-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+
+    .contact-location-block {
+        grid-column: auto;
+    }
+
+
+    .contact-map {
+        height: 260px;
+    }
+
+
+    .contacts-right h2 {
+        font-size: 48px;
+    }
+
+
+    .contacts-right p {
+        font-size: 16px;
+    }
+
+
+    .contacts-right-social {
+        margin-top: 60px;
+        padding-top: 0;
+    }
+
+
+    .contacts-right-social h3 {
+        font-size: 25px;
+    }
+
+
+    /* FOOTER */
+
+    .simple-footer {
+        flex-direction: column;
+        padding: 25px 6%;
+    }
+}
